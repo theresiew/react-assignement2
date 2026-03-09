@@ -74,13 +74,12 @@ function EmployeeCard({ employee }) {
       ref={cardRef}
       className="bg-[#16161f] border border-[#2a2a3a] rounded-2xl p-6 flex flex-col transition-all duration-300 hover:-translate-y-1 hover:border-[#3d3d55] hover:bg-[#1c1c28] hover:shadow-2xl group relative overflow-hidden"
     >
-      {/* Top accent line */}
+      
       <div
         className="absolute top-0 left-0 right-0 h-[3px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{ background: color }}
       />
 
-      {/* Card Header */}
       <div className="flex items-start gap-4 mb-1">
         <div
           className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
@@ -114,10 +113,8 @@ function EmployeeCard({ employee }) {
         </span>
       </div>
 
-      {/* Divider */}
       <div className="h-px bg-[#2a2a3a] my-4" />
 
-      {/* Info rows */}
       <div className="flex flex-col gap-3 flex-1">
         <div className="flex items-start gap-3">
           <span className="text-[#55556a] text-sm w-5 flex-shrink-0 mt-0.5">✉</span>
@@ -144,7 +141,6 @@ function EmployeeCard({ employee }) {
         </div>
       </div>
 
-      {/* Actions */}
       <div className="flex gap-2 mt-5 pt-4 border-t border-[#2a2a3a]">
         <button
           onClick={handlePrint}

@@ -3,8 +3,7 @@ import React from 'react'
 function SkeletonCard() {
   return (
     <div className="bg-[#16161f] border border-[#2a2a3a] rounded-2xl p-6 flex flex-col gap-0 animate-pulse">
-      
-      {/* Header */}
+     
       <div className="flex items-start gap-4 mb-1">
         <div className="w-14 h-14 rounded-xl bg-[#2a2a3a] flex-shrink-0" />
         <div className="flex-1 flex flex-col gap-2 pt-1">
@@ -14,10 +13,8 @@ function SkeletonCard() {
         <div className="w-10 h-6 bg-[#2a2a3a] rounded-md flex-shrink-0" />
       </div>
 
-      {/* Divider */}
       <div className="h-px bg-[#2a2a3a] my-4" />
 
-      {/* Info rows */}
       <div className="flex flex-col gap-3">
         {[1, 2, 3].map((i) => (
           <div key={i} className="flex items-start gap-3">
@@ -30,7 +27,6 @@ function SkeletonCard() {
         ))}
       </div>
 
-      {/* Actions */}
       <div className="flex gap-2 mt-5 pt-4 border-t border-[#2a2a3a]">
         <div className="flex-1 h-9 bg-[#2a2a3a] rounded-lg" />
         <div className="flex-1 h-9 bg-[#2a2a3a] rounded-lg" />

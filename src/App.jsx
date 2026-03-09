@@ -23,7 +23,6 @@ function App() {
 
       <main className="flex-1 max-w-7xl mx-auto w-full px-8 py-8">
 
-        {/* Toolbar */}
         <div className="flex items-center gap-3 mb-8 flex-wrap">
           <SearchBar
             value={searchQuery}
@@ -33,7 +32,6 @@ function App() {
           <SortSelect value={sortBy} onChange={setSortBy} />
         </div>
 
-        {/* Error */}
         {error && (
           <div className="flex items-start gap-4 bg-red-500/10 border border-red-500/30 rounded-2xl p-5 text-red-300 max-w-lg" role="alert">
             <svg className="flex-shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -48,7 +46,6 @@ function App() {
           </div>
         )}
 
-        {/* Loading skeletons */}
         {loading && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {Array.from({ length: 10 }, (_, i) => (
@@ -57,7 +54,6 @@ function App() {
           </div>
         )}
 
-        {/* Empty state */}
         {!loading && !error && displayedEmployees.length === 0 && (
           <div className="flex flex-col items-center justify-center py-24 text-[#55556a] gap-4">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -69,7 +65,6 @@ function App() {
           </div>
         )}
 
-        {/* Employee grid */}
         {!loading && !error && displayedEmployees.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {displayedEmployees.map((employee) => (
@@ -79,7 +74,6 @@ function App() {
         )}
       </main>
 
-      {/* Footer */}
       <footer className="text-center py-6 border-t border-[#2a2a3a] text-xs text-[#55556a]">
         Data from{' '}
         <a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noreferrer" className="text-[#7c6af7] hover:underline">

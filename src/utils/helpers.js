@@ -1,6 +1,4 @@
-/**
- * Filter employees by name or email query
- */
+
 export function filterEmployees(employees, query) {
   if (!query.trim()) return employees
   const lower = query.toLowerCase()
@@ -11,9 +9,6 @@ export function filterEmployees(employees, query) {
   )
 }
 
-/**
- * Sort employees by a given field
- */
 export function sortEmployees(employees, sortBy) {
   const sorted = [...employees]
   switch (sortBy) {
@@ -30,9 +25,6 @@ export function sortEmployees(employees, sortBy) {
   }
 }
 
-/**
- * Get initials from a full name
- */
 export function getInitials(name) {
   return name
     .split(' ')
@@ -42,9 +34,7 @@ export function getInitials(name) {
     .toUpperCase()
 }
 
-/**
- * Generate a consistent color based on employee ID
- */
+
 export function getAvatarColor(id) {
   const colors = [
     '#7c6af7', '#f76a8c', '#6af7c8', '#f7c46a',
